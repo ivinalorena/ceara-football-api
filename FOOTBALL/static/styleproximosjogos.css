@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    gap: 30px;
+}
+
+.page-wrapper {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    height: fit-content;
+}
+
+.sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px 20px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+    background: rgba(75, 0, 130, 0.3);
+    border-color: rgba(138, 43, 226, 0.5);
+    color: #ffffff;
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(75, 0, 130, 0.3);
+}
+
+/* Conteúdo principal */
+main {
+    flex: 1;
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+main h3 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0  10px;
+    margin-top: 20px;
+}
+
+thead{
+    background: rgba(255, 255, 255, 0.08);
+}
+
+thead tr th {
+    padding: 18px 20px;
+    text-align: left;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid rgba(138, 43, 226, 0.4);
+}
+
+thead tr th:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+thead tr th:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+tbody tr {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(138, 43, 226, 0.4);
+    transform: translateX(5px);
+    box-shadow: 0 4px 20px rgba(75, 0, 130, 0.2);
+}
+
+tbody tr td {
+    padding: 18px 20px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+tbody tr td:first-child {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+tbody tr td:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Destaque para gols */
+tbody tr td:nth-child(4),
+tbody tr td:nth-child(6) {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Lista de jogos */
+main ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main li {
+    padding: 20px 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.5px;
+}
+
+
+main li:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(138, 43, 226, 0.4);
+    transform: translateX(5px);
+    box-shadow: 0 4px 20px rgba(75, 0, 130, 0.2);
+}
+
+/* Mensagem quando não há dados */
+main p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 40px;
+    font-style: italic;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .page-wrapper {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+    }
+    
+    .sidebar ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    main {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 10px;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    main h3 {
+        font-size: 1.5rem;
+    }
+    
+    main li {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+    
+    .sidebar a {
+        padding: 12px 15px;
+        font-size: 0.85rem;
+    }
+}

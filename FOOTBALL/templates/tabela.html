@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico - Ceará SC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='stylehistorico.css')}}"> 
+</head>
+<body>
+    <div class="main-container">
+        <div class="page-wrapper">
+            <aside class="sidebar">
+                <ul>
+                    <li><a href="{{url_for('index')}}">Página Inicial</a></li>
+                    <li><a href = "{{url_for('buscar')}}">Histórico</a></li>
+                    <li><a href="{{url_for('proximos_jogos')}}">Próximos Jogos</a></li>
+                    <li><a href= "{{url_for('escalacao_ceara')}}"> Escalação</a></li>
+                    <li><a href="#">Estatísticas Gerais</a></li>
+                </ul>
+            </aside>
+            
+            <main>
+                <h3>Histórico de Jogos Temporada 2025 - Ceará SC</h3>
+                
+                {% if dados %}
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Local</th>
+                                <th>Time Casa</th>
+                                <th>Gols Casa</th>
+                                <th>Time Fora</th>
+                                <th>Gols Fora</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for jogo in dados %}
+                                <tr>
+                                    <td>{{ jogo.data }}</td>
+                                    <td>{{ jogo.local }}</td>
+                                    <td>{{ jogo.time_casa }}</td>
+                                    <td>{{ jogo['gols em casa'] }}</td>
+                                    <td>{{ jogo.time_fora }}</td>
+                                    <td>{{ jogo['gols fora'] }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <p>Nenhum jogo encontrado.</p>
+                {% endif %}
+            </main>
+        </div>
+    </div>
+</body>
+</html>

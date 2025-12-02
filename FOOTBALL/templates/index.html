@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatísticas de Futebol</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styleindex.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Lado esquerdo - Botões -->
+        <div class="label">
+            <h2>Acompanhe o Ceará SC</h2>
+            <p class="subtitle">Histórico completo, próximos jogos e estatísticas detalhadas da temporada</p>
+
+            <form action="/buscar" method="get">
+                <button type="submit" id="history-bnt">Histórico Temporada</button>
+            </form>
+
+            <form action="/proximosjogos" method="get">
+                <button type="submit" id="schedule-bnt">Próximos Jogos</button>
+            </form>
+
+            <form action="/escalacao" method="get">
+                <button type="submit" id="escalacao-bnt">Escalação</button>
+            </form>
+        </div>
+
+        <!-- Centro - Card de notícias -->
+        <div class="center-content">
+            <h3 class="header-centercontent">Últimas Notícias</h3>
+            <div class="info-time">
+                <a href="https://diariodonordeste.verdesmares.com.br/jogada/dorival-indica-corinthians-modificado-diante-do-fortaleza-vamos-ter-que-variar-a-equipe-1.3714772" target="_blank">
+                    Dorival indica Corinthians modificado diante do Fortaleza: 'Vamos ter que variar a equipe'
+                </a>
+            </div>
+            <div class="info-time">
+                <a href="https://www.itatiaia.com.br/esportes/futebol/futebol-nacional/brasileirao-serie-a/inter-santos-ceara-comentaristas-elegem-clubes-que-serao-rebaixados-no-brasileirao" target="_blank">
+                    Inter, Santos, Ceará? Comentaristas elegem clubes que serão rebaixados no Brasileirão
+                    Briga contra o Z4 da competição segue acirrada a duas rodadas do fim
+                </a>
+            </div>
+        </div>
+
+        <!-- Lado direito - Logo -->
+        <div class="card-right">
+            <img src="{{url_for('static', filename='pngceara.png')}}" alt="Logo Ceará SC">
+        </div>
+    </div>
+</body>
+</html>
