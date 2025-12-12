@@ -21,7 +21,6 @@ body {
     gap: 30px;
 }
 
-/* Sidebar */
 .sidebar {
     width: 250px;
     padding: 30px 20px;
@@ -59,7 +58,7 @@ body {
     transform: translateX(5px);
 }
 
-/* Main */
+
 main {
     flex: 1;
     padding: 40px;

@@ -9,10 +9,12 @@ body {
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    overflow: hidden;
+    padding-bottom: 100px;
+    overflow-x: hidden;
 }
 
 .container {
@@ -145,7 +147,6 @@ body {
     animation: float 8s ease-in-out infinite;
 }
 
-/* Animação flutuante suave */
 @keyframes float {
     0%, 100% {
         transform: translateY(0px) rotate(0deg);
@@ -266,3 +267,35 @@ button:hover::after {
         padding: 20px;
     }
 }
+/* 
+
+footer {
+    position: re;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+footer a {
+    color: rgba(138, 43, 226, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: rgba(138, 43, 226, 1);
+    text-decoration: underline;
+} */
