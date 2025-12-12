@@ -55,11 +55,12 @@ body {
     max-width: 450px;
 }
 
-/* Centro - Card de notícias */
+
 .center-content {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 100px;
     z-index: 2;
     display: table-column;
 }
