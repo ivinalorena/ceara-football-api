@@ -86,7 +86,6 @@ def escalacao():
             'jogadores': []
         }
         
-        # Organizar jogadores por posição
         for jogador in dados.get('squad', []):
             escalacao_info['jogadores'].append({
                 'nome': jogador['name'],
@@ -109,3 +108,41 @@ def calcular_idade(data_nascimento):
         return idade
     except:
         return 'N/A'
+    
+""" def stats():
+    # inserção de outra api para selecionar as estatísticas
+    url_stats = 
+    response=requests.get(url_stats,headers=) """
+
+""" def info_player(ID):
+    api_token = 'po0EklZJlG2HH15AbY7sn2S3qnlFAU7fAME76GKegJIutMWH360sedeCzlzb'
+    payload = ''
+    headers = {}
+    url = (f'https://api.sportmonks.com/v3/football/players/{ID}?api_token={api_token},{payload},{headers}')
+    
+    response= requests.get(url,api_token)
+    for info in response:
+
+        print(info)  """
+""" def info_player():
+    import http.client
+    api_token = 'po0EklZJlG2HH15AbY7sn2S3qnlFAU7fAME76GKegJIutMWH360sedeCzlzb'
+    conn = http.client.HTTPSConnection("api.sportmonks.com")
+    payload = ''
+    headers = {}
+    #https://api.sportmonks.com/v3/football/players
+    conn.request("GET", "https://api.sportmonks.com/v3/my/filters/entity?api_token=po0EklZJlG2HH15AbY7sn2S3qnlFAU7fAME76GKegJIutMWH360sedeCzlzb", payload, headers)
+    res = conn.getresponse()
+    data = res.read()
+    print(data.decode("utf-8"))
+ """
+#rint(info_player())
+# id do ceará no sportmonks: 12220
+def info_team():
+    api_token = 'po0EklZJlG2HH15AbY7sn2S3qnlFAU7fAME76GKegJIutMWH360sedeCzlzb'
+    url = f'https://api.sportmonks.com/v3/football/teams/search/CearáSC?api_token={api_token}'
+    headers={}
+    response = requests.get(url,headers)
+    print(response.json())
+
+info_team()

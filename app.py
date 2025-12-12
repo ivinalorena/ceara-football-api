@@ -52,8 +52,9 @@ def proximos_jogos():
     data = proximos_jogos_ceara()
 
     if not data:
-        return "Nenhum dado selecionado."
-    # Implementar a lógica para buscar os próximos jogos
+        return render_template("historydefault.html")
+    
+
     return render_template("proximosjogos.html",data=data)
 
 @app.route("/escalacao", methods=["GET"])

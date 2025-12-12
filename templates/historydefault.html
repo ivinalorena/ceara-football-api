@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fim temporada</title>
+        <link rel="icon" type="image/png" href="{{url_for('static', filename='pngceara.png')}}">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel= "stylesheet" href="{{url_for('static', filename='stylehistdefault.css')}}">
+    </head>
+
+<body>
+    <div class="main-container">
+            <div class="page-wrapper">
+                <aside class="sidebar">
+                    <ul>
+                        <li><a href="{{url_for('index')}}">Página Inicial</a></li>
+                        <li><a href = "{{url_for('buscar')}}">Histórico</a></li>
+                        <li><a href="{{url_for('proximos_jogos')}}">Próximos Jogos</a></li>
+                        <li><a href= "{{url_for('escalacao_ceara')}}"> Escalação</a></li>
+                        <!-- <li><a href="#">Estatísticas Gerais</a></li> -->
+                    </ul>
+                </aside>
+                <h3>FIM DA TEMPORADA DE 2025</h3>
+                <img src="{{url_for('static',filename='Soccer-bro.png')}}">
+</body>

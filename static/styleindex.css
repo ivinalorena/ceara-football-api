@@ -29,10 +29,11 @@ body {
 .label {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     align-items: flex-start;
     padding-left: 80px;
     z-index: 2;
+    max-width: 500px; 
 }
 
 .label h2 {
